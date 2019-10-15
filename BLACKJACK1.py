@@ -20,7 +20,7 @@ baralhoinicial = [A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K]*4 #cada baralho tem 4 
 naipes = ["paus", "copas", "espadas", "pica"]
 baralho = (baralhoinicial)
 maojog = [] #mão do jogador
-mc = [] #mão do croupier
+maocro = [] #mão do croupier
 
 lista_sim = ["Sim", "SIM", "sim", "S", "s"] #lista de possibilidades de "sim"
 lista_nao = ["Não", "NÃO", "não", "Nao", "NAO", "nao", "N", "n"] #lista de possibilidades de "não"
