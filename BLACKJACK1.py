@@ -109,7 +109,7 @@ while dinheiro != 0:
         dinheiro = (dinheiro + (1.5*aposta))
         print("Meus parabens, voce ganhou um Blackjack")
         continue
-    print("Suas cartas são: ", maojog, "dando um total de: " sum(maojog))
+    print("Suas cartas são: ", maojog, "dando um total de: ", sum(maojog))
     sn = input("voce quer 'continuar' ou 'mais cartas': ")
     if sn in lista_continuar:
         maojog.append(random.choice(baralho))
