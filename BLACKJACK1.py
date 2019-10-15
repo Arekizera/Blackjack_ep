@@ -95,8 +95,22 @@ while dinheiro != 0:
     if aposta > dinheiro:
         print("Você tentou apostar mais dinheiro do que realmente tem, sendo assim foi penalizado em: R$", 0.1*dinheiro, "por tentar")
         dinheiro = dinheiro - (0.1*dinheiro)
-        continue 
-
+        continue
+    maojog.append(random.choice(baralho))
+    maojog.append(random.choice(baralho))
+    if sum(maojog) > 21 and A in maojog:
+        substituir = maojog.index(A)
+        maojog[substituir] = 1
+    if sum(maojog) > 21:
+        print("Voce ultrapassou o limite pontos")
+        dinheiro -= aposta
+        continue
+    if sum(maojog) == 21:
+        dinheiro = (dinheiro + (1.5*aposta))
+        print("Meus parabens, voce ganhou um Blackjack")
+        continue
+    #print("Suas cartas são: ", mj, "dando um total de: " sum(maojog))
+    sn = input("voce quer 'continuar' ou 'mais cartas': ")
     
 
     
