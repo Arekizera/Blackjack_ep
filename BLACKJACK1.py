@@ -153,5 +153,10 @@ while dinheiro != 0:
         dinheiro -= aposta
         print("Que pena, o croupier ganhou")
         continue
+if dinheiro == 0:
+    print("Meu amigo {0}, parece que seu dinheiro acabou. PARE DE JOGAR E VÁ TRABALHAR VAGABUNDO".format(nome))
+print(" ")
+print("Até a próxima!")
+    
 
     
