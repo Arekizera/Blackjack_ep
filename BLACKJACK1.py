@@ -93,8 +93,7 @@ while dinheiro != 0:
         print("Valor inválido!")
         continue
     if aposta > dinheiro:
-        print("Você tentou apostar mais dinheiro do que realmente tem, sendo assim foi penalizado em: R$", 0.1*dinheiro, "por tentar")
-        dinheiro = dinheiro - (0.1*dinheiro)
+        print("Você tentou apostar mais dinheiro do que realmente tem, invalido!")
         continue
     maojog.append(random.choice(baralho))
     maojog.append(random.choice(baralho))
