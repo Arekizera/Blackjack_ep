@@ -83,7 +83,19 @@ baralho = baralho * quant
 while dinheiro != 0:
     maocro.clear()
     maojog.clear()
-    aposta = int(input("Aposte um valor inteiro: "))    
+    print("Voce tem {0}, reais".format(dinheiro))
+    aposta = int(input("Aposte um valor inteiro: "))
+    if aposta == "fim" or aposta == "desisto":
+        print("Você perdeu!")
+        break
+    aposta = int(input("Aposte um valor inteiro: "))
+    if aposta < 1:
+        print("Valor inválido!")
+        continue
+    if aposta > dinheiro:
+        print("Você tentou apostar mais dinheiro do que realmente tem, sendo assim foi penalizado em: R$", 0.1*dinheiro, "por tentar")
+        dinheiro = dinheiro - (0.1*dinheiro)
+        continue 
 
     
 
