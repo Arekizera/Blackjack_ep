@@ -11,7 +11,6 @@ import random
 #- Alex Steijntjes, alexs4@al.insper.edu.br
 #- Bruno Tosi, brunoct1@al.insper.edu.br
 
-
 J = 10 #todas com figura valem 10 pontos
 Q = 10
 K = 10
@@ -29,6 +28,7 @@ lista_carta=["carta", "cartas", "Carta", "Cartas"]  #lista de possibilidades de 
 
 nome = input("Digite seu nickname: ")
 dinheiro = float(input("Digite a quantidade de dinheiro que deseja apostar: "))
+
 ajudinha = "nao"
 help = "No inicio da partida, voce apostará um valor e em seguida receberá duas cartas. Cada carta tera um valor somado; caso esse valor passe de 21 pontos, voce estoura e perde.(Cartas de número valem seu próprio valor, cartas de figuras valem 10 pontos, e o Ás vale 11 pontos. Portanto, se sua mão valer mais de 21 pontos e você tem um Ás, o Ás passa a valer 1 ponto somente). Ganha o jogador que tiver o número mais proximo de 21 sem passa-lo. (Você pode pedir mais cartas caso deseje)" #texto de ajuda
 print("Bem vindo ao Blackjack jogador {0}!".format(nome))
@@ -109,7 +109,7 @@ while dinheiro != 0:
         print("Meus parabens, voce ganhou um Blackjack")
         continue
     print("Suas cartas são: ", maojog, "dando um total de: ", sum(maojog))
-    sn = input("voce quer 'continuar' ou 'mais cartas': ")
+    sn = input("voce quer 'continuar' ou 'mostrar cartas': ")
     if sn in lista_continuar:
         maojog.append(random.choice(baralho))
         if sum(maojog) > 21 and A in maojog:
@@ -124,7 +124,7 @@ while dinheiro != 0:
             print("Meus parabéns voce completou um Blackjack com as cartas", maojog,)
             break
         print("Suas cartas são: ", maojog, "dando um total de: ", sum(maojog))
-        sn = input("voce quer 'continuar' ou 'mais cartas: ")
+        sn = input("voce quer 'continuar' ou 'mostrar cartas': ")
     if sum(maojog) >= 21:
         continue
     maocro.append(random.choice(baralho))
@@ -155,7 +155,4 @@ while dinheiro != 0:
 if dinheiro == 0:
     print("Meu amigo {0}, parece que seu dinheiro acabou. PARE DE JOGAR E VÁ TRABALHAR VAGABUNDO".format(nome))
 print(" ")
-print("Até a próxima!")
-    
-
-    
+print("Até a próxima!") 
