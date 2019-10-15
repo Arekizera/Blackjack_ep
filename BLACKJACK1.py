@@ -124,6 +124,34 @@ while dinheiro != 0:
             dinheiro = dinheiro + (1.5 * aposta)
             print("Meus parabéns voce completou um Blackjack com as cartas", maojog,)
             break
-    
+        print("Suas cartas são: ", maojog, "dando um total de: ", sum(maojog))
+        sn = input("voce quer 'continuar' ou 'mais cartas: ")
+    if sum(maojog) >= 21:
+        continue
+    maocro.append(random.choice(baralho))
+    maocro.append(random.choice(baralho))
+    print("As cartas do croupier são: ", maocro, "dando um total de: ", sum(maocro))
+    while sum(maocro) < 17 and sum(maojog) > sum(maocro):
+        maocro.append(random.choice(baralho))
+        print("As cartas do croupier são: ", maocro, "dando um total de: ", sum(maocro))
+    if sum(maocro) > 21 and A in maocro:
+        substituir = maocro.index(A)
+        maocro[substituir] = 1
+    if sum(maocro) > 21:
+        print("Croupier passou do limite")
+        dinheiro += aposta
+        print("Voce foi o vencedor!, parabens {0}".format(nome))
+        continue
+    if sum(maojog) == sum(maocro):
+        print("Foi um empate!")
+        continue
+    elif sum(maojog) > sum(maocro):
+        dinheiro += aposta
+        print("Voce foi o vencedor!, parabens {0}".format(nome))
+        continue
+    elif sum(maocro) > sum(maojog):
+        dinheiro -= aposta
+        print("Que pena, o croupier ganhou")
+        continue
 
     
