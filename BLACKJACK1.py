@@ -41,7 +41,49 @@ while pergunta in lista_nao:
         break
     else:
         continue
-    
+        
+        
+print(" ")    
+print("REGRINHAS / DICAS ADICIONAIS: ")
+print(" ")
+
+print("Dica-1: Não aposte mais dinheiro do que você tem.")
+print(" ")
+print("Dica-2: Se logo no inicio suas cartas já somarem 21 pontos (10 pontos + Ás), você ganha 1,5x o valor apostado.")
+print(" ")
+print("Dica-3: Se você ganhar ou perder de outra forma você ganha ou perde exatamente o valor apostado.")
+print(" ")
+print("Dica-4: Enquanto a mão do croupier for menor que a sua, ele vai tirar mais cartas até que o valor minimo de 17 pontos seja atingido.")
+print(" ")
+print("Dica-5: Se quiser que o jogo pare, digite 'desisto' ou 'fim'.")
+print(" ")
+print(" ")
+print("Boa sorte {0}!".format(nome))
+
+quant = 0 #loop quantidade de baralhos
+incentivo = 0 #loop pra incentivar jogador a escolher menos baralhos
+
+while quant<1 or quant>10 or incentivo in lista_nao:
+    incentivo='s'
+    quant=int(input("Com quantos baralhos deseja jogar? "))
+    if quant>10:
+        print("O valor máximo são 10 baralhos apenas!")
+        continue
+    elif quant<1:
+        print("Valor inválido.")
+        continue
+    elif quant>3:
+        incentivo=input("O jogo funciona melhor com menos baralhos, tem certeza que deseja manter {0} baralhos? ".format(quant))
+    if incentivo in lista_nao:
+        continue
+    elif incentivo in lista_sim:
+        break 
+
+baralho = baralho * quant
+while dinheiro != 0:
+    maocro.clear()
+    maojog.clear()
+    aposta = int(input("Aposte um valor inteiro: "))    
 
     
 
