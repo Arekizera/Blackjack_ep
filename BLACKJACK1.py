@@ -27,7 +27,7 @@ lista_continuar = ["continuar", "Continuar", "CONTINUAR"] # lista de possibilida
 lista_carta=["carta", "cartas", "Carta", "Cartas"]  #lista de possibilidades de "carta"
 
 nome = input("Digite seu nickname: ")
-dinheiro = float(input("Digite a quantidade de dinheiro que deseja apostar: "))
+dinheiro = float(input("Digite a quantidade de dinheiro que voce tem: "))
 
 ajudinha = "nao"
 help = "No inicio da partida, voce apostará um valor e em seguida receberá duas cartas. Cada carta tera um valor somado; caso esse valor passe de 21 pontos, voce estoura e perde.(Cartas de número valem seu próprio valor, cartas de figuras valem 10 pontos, e o Ás vale 11 pontos. Portanto, se sua mão valer mais de 21 pontos e você tem um Ás, o Ás passa a valer 1 ponto somente). Ganha o jogador que tiver o número mais proximo de 21 sem passa-lo. (Você pode pedir mais cartas caso deseje)" #texto de ajuda
@@ -84,7 +84,7 @@ while dinheiro != 0:
     maocro.clear()
     maojog.clear()
     print("Voce tem {0}, reais".format(dinheiro))
-    aposta = (input("Aposte um valor inteiro: "))
+    aposta = input("Aposte um valor inteiro: ")
     if aposta == "fim" or aposta == "desisto":
         print("Você perdeu!")
         break
