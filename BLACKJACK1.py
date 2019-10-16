@@ -84,7 +84,7 @@ while dinheiro != 0:
     maocro.clear()
     maojog.clear()
     print("Voce tem {0}, reais".format(dinheiro))
-    aposta = int(input("Aposte um valor inteiro: "))
+    aposta = (input("Aposte um valor inteiro: "))
     if aposta == "fim" or aposta == "desisto":
         print("Você perdeu!")
         break
