@@ -88,7 +88,6 @@ while dinheiro != 0:
     if aposta == "fim" or aposta == "desisto":
         print("Você perdeu!")
         break
-    aposta = int(input("Aposte um valor inteiro: "))
     if aposta < 1:
         print("Valor inválido!")
         continue
