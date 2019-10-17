@@ -78,3 +78,24 @@ while quant<1 or quant>10 or incentivo == 'n':
         print("Para jogar é preciso usar pelo menos um baralho.")
         continue
     elif quant>3:
+        incentivo=input("O jogo funciona melhor com menos baralhos, tem certeza que deseja manter {0} baralhos? ".format(quant))
+    if incentivo == "n":
+        continue
+    elif incentivo == 's':
+        break 
+
+baralho = baralho * quant
+while dinheiro != 0:
+    maocro.clear()
+    maojog.clear()
+    print("Você tem {0} reais".format(dinheiro))
+    aposta = input("De acordo com o seu dinheiro, quanto gostaria de apostar?: ")
+
+    if aposta == "fim" or aposta == "desisto":
+        print("Obrigado por jogar!")
+        break
+    else:
+        aposta = float(aposta)
+    if aposta < 1:
+        print("não é possivel apostar esse valor!")
+        continue
