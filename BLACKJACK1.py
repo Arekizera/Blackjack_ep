@@ -9,7 +9,6 @@ Q = 10
 K = 10
 A = 11 #vale 1 se a mao for estourar
 baralhoinicial = [A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K]*4 #cada baralho tem 4 desses
-naipes = ["paus", "copas", "espadas", "ouros"]
 baralho = (baralhoinicial)
 maojog = [] #mão do jogador
 maocro = [] #mão do croupier
