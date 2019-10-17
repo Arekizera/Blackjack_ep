@@ -106,7 +106,7 @@ while dinheiro != 0: #aposta
     if sum(maojog) > 21 and A in maojog: #definindo valores para "a"
         substituir = maojog.index(A)
         maojog[substituir] = 1
-    if sum(maojog) > 21:
+    if sum(maojog) > 21: #definindo limite
         print("Você ultrapassou o limite pontos")
         dinheiro -= aposta
         continue
