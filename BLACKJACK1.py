@@ -121,7 +121,7 @@ while dinheiro != 0: #aposta
         sn = input("Você quer 'continuar' ou mais uma 'carta': ")
     while sn in lista_carta:
         maojog.append(random.choice(baralho))
-        if sum(maojog) > 21 and A in maojog:
+        if sum(maojog) > 21 and A in maojog: #valor de A
             substituir = maojog.index(A)
             maojog[substituir] = 1
         if sum(maojog) > 21:
@@ -141,7 +141,7 @@ while dinheiro != 0: #aposta
         continue
     maocro.append(random.choice(baralho))
     maocro.append(random.choice(baralho))
-    if sum(maocro) > 21 and A in maocro:
+    if sum(maocro) > 21 and A in maocro: #definindo valor de A
         substituir = maocro.index(A)
         maocro[substituir] = 1
     print("As cartas do croupier são: ", maocro, "dando um total de: ", sum(maocro))
@@ -156,17 +156,17 @@ while dinheiro != 0: #aposta
         dinheiro += aposta
         print("Você foi o vencedor!, parabéns {0}".format(nome))
         continue
-    if sum(maojog) == sum(maocro):
+    if sum(maojog) == sum(maocro): #empate
         print("Foi um empate!")
         continue
-    elif sum(maojog) > sum(maocro):
+    elif sum(maojog) > sum(maocro): #mao jogador vence
         dinheiro += aposta
         print("Você foi o vencedor!, parabéns {0}".format(nome))
         continue
-    elif sum(maocro) > sum(maojog):
+    elif sum(maocro) > sum(maojog): #mao do croupier vence
         dinheiro -= aposta
         print("Que pena, o Croupier ganhou")
         continue
-if dinheiro == 0:
+if dinheiro == 0: #condicao para quando acaba o dinheiro
     print("Querido(a), {0}, parece que seu dinheiro acabou, não é possivel continuar, obrigado.".format(nome))
 print("\nAté a próxima!")
