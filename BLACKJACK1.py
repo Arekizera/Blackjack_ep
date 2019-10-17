@@ -67,3 +67,14 @@ if dinheiro < 1:
 
 quant = 0 #loop quantidade de baralhos
 incentivo = 0 #loop pra incentivar jogador a escolher menos baralhos
+
+while quant<1 or quant>10 or incentivo == 'n':
+    incentivo='s'
+    quant=int(input("Com quantos baralhos deseja jogar? (Máximo 10 e mínimo 1) "))
+    if quant>10:
+        print("Infelizmente só é possivel jogar com no maximo 10 baralhos, escolha novamente!")
+        continue
+    elif quant<1:
+        print("Para jogar é preciso usar pelo menos um baralho.")
+        continue
+    elif quant>3:
