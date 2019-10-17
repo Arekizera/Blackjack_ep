@@ -120,3 +120,24 @@ while dinheiro != 0:
     while sn not in lista_carta and sn not in lista_continuar:
         print('Infelizmente eu não conseguir entender, tente digitar novamente')
         sn = input("Você quer 'continuar' ou mais uma 'carta': ")
+    while sn in lista_carta:
+        maojog.append(random.choice(baralho))
+        if sum(maojog) > 21 and A in maojog:
+            substituir = maojog.index(A)
+            maojog[substituir] = 1
+        if sum(maojog) > 21:
+            print("Você passou do limite com as cartas", maojog, "dando um total de: ", sum(maojog))
+            dinheiro -= aposta
+            break
+        elif sum(maojog) == 21:
+            dinheiro = dinheiro + aposta
+            print("Meus parabéns você completou um Blackjack com as cartas", maojog,)
+            break
+        print("Suas cartas são: ", maojog, "dando um total de: ", sum(maojog))
+        sn = input("Você quer 'continuar' ou mais uma 'carta': ")
+        while sn not in lista_carta and sn not in lista_continuar:
+            print('Não entendi, tente digitar corretamente')
+            sn = input("Você quer 'continuar' ou mais uma 'carta': ")
+    if sum(maojog) >= 21:
+        continue
+    maocro.append(random.choice(baralho))
