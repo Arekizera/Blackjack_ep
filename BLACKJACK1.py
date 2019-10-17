@@ -48,3 +48,13 @@ while pergunta != "s" or pergunta != "n":
         break
     elif pergunta == "s":
         break
+        print("Desculpe, não entendi.")
+    pergunta = input("Você sabe jogar Blackjack?: ")
+    
+         
+print("\n\nDICAS ADICIONAIS: \n")    
+print("Dica-1: Não aposte mais dinheiro do que você tem.\n")
+print("Dica-2: Se logo no inicio suas cartas já somarem 21 pontos (10 pontos + Ás), você ganha 1,5x o valor apostado.\n")
+print("Dica-3: Se você ganhar ou perder de outra forma você ganha ou perde exatamente o valor apostado.\n")
+print("Dica-4: Enquanto a mão do croupier for menor que a sua, ele vai tirar mais cartas até que o valor minimo de 17 pontos seja atingido.\n")
+print("Dica-5: Se quiser que o jogo pare, digite 'desisto' ou 'fim'.\n\n")
