@@ -19,3 +19,12 @@ lista_continuar = ["continuar", "Continuar", "CONTINUAR"] # lista de possibilida
 lista_carta=["carta", "cartas", "Carta", "Cartas", "CARTA", 'CARTAS', 'c', "C"]  #lista de possibilidades de "carta"
 
 
+nome = input("Qual o seu nickname?: ")
+    
+print('Seja bem vindo ao jogo Blackjack, {0}!'.format(nome))
+
+pergunta = input("Você sabe jogar Blackjack? (s/n): ")
+while pergunta != "s" or pergunta != "n":
+    if pergunta == "n":
+        print('\n'
+              'Blackjack Insper!\n'
