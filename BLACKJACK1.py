@@ -116,7 +116,7 @@ while dinheiro != 0: #aposta
         continue
     print("Suas cartas são: ", maojog, "dando um total de: ", sum(maojog))
     sn = input("Você quer 'continuar' ou mais uma 'carta': ")
-    while sn not in lista_carta and sn not in lista_continuar:
+    while sn not in lista_carta and sn not in lista_continuar: #definindo escolhas do jogador
         print('Infelizmente eu não conseguir entender, tente digitar novamente')
         sn = input("Você quer 'continuar' ou mais uma 'carta': ")
     while sn in lista_carta:
