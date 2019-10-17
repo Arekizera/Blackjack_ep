@@ -162,3 +162,12 @@ while dinheiro != 0:
         continue
     elif sum(maojog) > sum(maocro):
         dinheiro += aposta
+                print("Você foi o vencedor!, parabéns {0}".format(nome))
+        continue
+    elif sum(maocro) > sum(maojog):
+        dinheiro -= aposta
+        print("Que pena, o Croupier ganhou")
+        continue
+if dinheiro == 0:
+    print("Querido(a), {0}, parece que seu dinheiro acabou, não é possivel continuar, obrigado.".format(nome))
+print("\nAté a próxima!")
