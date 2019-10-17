@@ -58,3 +58,12 @@ print("Dica-2: Se logo no inicio suas cartas já somarem 21 pontos (10 pontos + 
 print("Dica-3: Se você ganhar ou perder de outra forma você ganha ou perde exatamente o valor apostado.\n")
 print("Dica-4: Enquanto a mão do croupier for menor que a sua, ele vai tirar mais cartas até que o valor minimo de 17 pontos seja atingido.\n")
 print("Dica-5: Se quiser que o jogo pare, digite 'desisto' ou 'fim'.\n\n")
+print("Boa sorte {0}!".format(nome))
+
+dinheiro = float(input("Quanto dinheiro você tem pra apostar?: "))
+if dinheiro < 1:
+    print("Não é possivel apostar esse valor, tente apostar um pouco mais!")
+    dinheiro = float(input("Quanto dinheiro você tem para jogar?: "))
+
+quant = 0 #loop quantidade de baralhos
+incentivo = 0 #loop pra incentivar jogador a escolher menos baralhos
