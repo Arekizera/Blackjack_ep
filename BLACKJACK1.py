@@ -141,3 +141,24 @@ while dinheiro != 0:
     if sum(maojog) >= 21:
         continue
     maocro.append(random.choice(baralho))
+    maocro.append(random.choice(baralho))
+    if sum(maocro) > 21 and A in maocro:
+        substituir = maocro.index(A)
+        maocro[substituir] = 1
+    print("As cartas do croupier são: ", maocro, "dando um total de: ", sum(maocro))
+    while sum(maocro) < 17 and sum(maojog) > sum(maocro):
+        maocro.append(random.choice(baralho))
+        print("As cartas do croupier são: ", maocro, "dando um total de: ", sum(maocro))
+    if sum(maocro) > 21 and A in maocro:
+        substituir = maocro.index(A)
+        maocro[substituir] = 1
+    if sum(maocro) > 21:
+        print("Croupier passou do limite")
+        dinheiro += aposta
+        print("Você foi o vencedor!, parabéns {0}".format(nome))
+        continue
+    if sum(maojog) == sum(maocro):
+        print("Foi um empate!")
+        continue
+    elif sum(maojog) > sum(maocro):
+        dinheiro += aposta
