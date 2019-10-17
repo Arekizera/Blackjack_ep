@@ -38,3 +38,13 @@ while pergunta != "s" or pergunta != "n":
               '\n'
               'Regras do Jogo:\n'
               '• O jogo é composto de no maximo 10 baralhos de 52 cartas cada.\n'
+              '• As cartas Reis, Damas e Valetes valem 10 pontos.\n'
+              '• As demais cartas valem o proprio valor escrito nelas.\n'
+              '• Caso você receba um As e a sua ou a pontuação do Croupier estore, esse As passa a valer apenas 1 (um) ponto.\n'
+              '• A cada rodada é feita uma nova aposta por parte do jogador e é sorteada mais uma carta tanto para ele quanto para o Croupier.\n'
+              '• As apostas são feitas no inicial de cada dedido de carta.\n'
+              '• Caso você faça Blackjack ou o Croupier perca, você recebe o valor apostado.\n'
+              '• Caso você perca, o dinheiro é perdido também.\n')
+        break
+    elif pergunta == "s":
+        break
