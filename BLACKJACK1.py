@@ -84,8 +84,8 @@ while quant<1 or quant>10 or incentivo == 'n': #quantidade de baralhos
         break 
 
 baralho = baralho * quant
-while dinheiro != 0:
-    maocro.clear()
+while dinheiro != 0: #aposta
+    maocro.clear() 
     maojog.clear()
     print("Você tem {0} reais".format(dinheiro))
     aposta = input("De acordo com o seu dinheiro, quanto gostaria de apostar?: ")
