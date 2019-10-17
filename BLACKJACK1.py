@@ -48,7 +48,7 @@ while pergunta != "s" or pergunta != "n":
         break
     elif pergunta == "s":
         break
-        print("Desculpe, não entendi.")
+    print("Desculpe, não entendi.")
     pergunta = input("Você sabe jogar Blackjack?: ")
     
          
@@ -99,7 +99,7 @@ while dinheiro != 0:
     if aposta < 1:
         print("não é possivel apostar esse valor!")
         continue
-        if aposta > dinheiro:
+    if aposta > dinheiro:
         print("Você não tem essa quantidade de dinheiro, aposte novamente!")
         continue
     maojog.append(random.choice(baralho))
@@ -162,7 +162,7 @@ while dinheiro != 0:
         continue
     elif sum(maojog) > sum(maocro):
         dinheiro += aposta
-                print("Você foi o vencedor!, parabéns {0}".format(nome))
+        print("Você foi o vencedor!, parabéns {0}".format(nome))
         continue
     elif sum(maocro) > sum(maojog):
         dinheiro -= aposta
