@@ -99,3 +99,24 @@ while dinheiro != 0:
     if aposta < 1:
         print("não é possivel apostar esse valor!")
         continue
+        if aposta > dinheiro:
+        print("Você não tem essa quantidade de dinheiro, aposte novamente!")
+        continue
+    maojog.append(random.choice(baralho))
+    maojog.append(random.choice(baralho))
+    if sum(maojog) > 21 and A in maojog:
+        substituir = maojog.index(A)
+        maojog[substituir] = 1
+    if sum(maojog) > 21:
+        print("Você ultrapassou o limite pontos")
+        dinheiro -= aposta
+        continue
+    if sum(maojog) == 21:
+        dinheiro = (dinheiro + (1.5*aposta))
+        print("Meus parabéns, você ganhou um Blackjack")
+        continue
+    print("Suas cartas são: ", maojog, "dando um total de: ", sum(maojog))
+    sn = input("Você quer 'continuar' ou mais uma 'carta': ")
+    while sn not in lista_carta and sn not in lista_continuar:
+        print('Infelizmente eu não conseguir entender, tente digitar novamente')
+        sn = input("Você quer 'continuar' ou mais uma 'carta': ")
