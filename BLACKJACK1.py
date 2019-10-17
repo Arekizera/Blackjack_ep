@@ -170,3 +170,22 @@ while dinheiro != 0: #aposta
 if dinheiro == 0: #condição para quando acaba o dinheiro
     print("Querido(a), {0}, parece que seu dinheiro acabou, não é possivel continuar, obrigado.".format(nome))
 print("\nAté a próxima!")
+
+
+
+
+ahasduea
+def ghaue
+nfiis in hfhajjd
+ akdjkoda
+    
+    jnsncs
+        jhdfihishfz
+            nfhishfi
+            idi
+            89
+            hjsua
+     fnjdifjidfs
+    dsmds
+   
+djhsidhjisd
